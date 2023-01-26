@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text">
+    <meta name="" content="">
+    <title>Animated Heart For Your love</title>
+    <style type="text/css" media="all">
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 92vh;
+    background: black;
+}
+.heart{
+    height: 100px;
+    width: 100px;
+    background: red;
+    /* position: relative;
+    transform: rotate(-45deg); */
+    box-shadow: 10px 10px 90px red;
+    animation: heart 0.8s linear infinite;
+}
+@keyframes heart{
+    0%{
+        transform: rotate(-45deg) scale(.00);
+    }
+    80%{
+        transform: rotate(-45deg) scale(0.80);
+    }
+    100%{
+        transform: rotate(-45deg) scale(.00);
+    }
+}
+.heart::before{
+    content: "";
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    background: red;
+    top: -55%;
+    border-radius: 50px;
+    box-shadow: -10px 10px 90px red;
+}
+.heart::after{
+    content: "";
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    background: red;
+    right: -55%;
+    border-radius: 50px;
+    box-shadow: -10px 10px 90px red;
+}
+.naveed{
+    position: absolute;
+    color: white;
+    font-size: 40px;
+    width: 150px;
+    height: 30px;
+    border-radius: 20px;
+    margin-right: 880px;
+    top: 160px;
+    display: inline-block;
+}
+    </style>
+</head>
+<body>
+    <div onclick="some()" class="heart">
+
+    </div>
+    <div class="naveed">
+         Mian naveed G
+    </div>
+</body>
+<script>
+      function some(){
+        for(i =1;i<=10;i++)
+        document.write("<i><h1>Mian Naveed</h1></i>")
+    }
+</script>
+</html>
